@@ -1,0 +1,93 @@
+{
+  "updatedAt": "2026-04-06T11:59:10.577Z",
+  "products": [
+    {
+      "id": 1,
+      "category": "티비",
+      "model": "55U8000",
+      "note": "UHD 55",
+      "coupangRef": 480000,
+      "naverRef": 456810,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 2,
+      "category": "티비",
+      "model": "65DU6900",
+      "note": "UHD 65",
+      "coupangRef": 605000,
+      "naverRef": 574200,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 3,
+      "category": "휴대폰",
+      "model": "SM-A366N",
+      "note": "갤럭시A36",
+      "coupangRef": 419000,
+      "naverRef": 419000,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 4,
+      "category": "휴대폰",
+      "model": "SM-A175N",
+      "note": "갤럭시A17",
+      "coupangRef": 286000,
+      "naverRef": 286000,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 5,
+      "category": "노트북",
+      "model": "NT345XPA-K14A",
+      "note": "갤럭시북3 GO",
+      "coupangRef": 449000,
+      "naverRef": 468000,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 6,
+      "category": "태블릿",
+      "model": "SM-X200",
+      "note": "갤럭시탭A8",
+      "coupangRef": 179000,
+      "naverRef": 168000,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 7,
+      "category": "모니터",
+      "model": "S32CG550",
+      "note": "QHD 32",
+      "coupangRef": 269000,
+      "naverRef": 278120,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    },
+    {
+      "id": 8,
+      "category": "모니터",
+      "model": "S24C310",
+      "note": "FHD 24",
+      "coupangRef": 141000,
+      "naverRef": 133990,
+      "cheapest": null,
+      "image": null,
+      "top5": []
+    }
+  ]
+}
