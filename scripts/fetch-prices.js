@@ -1,36 +1,31 @@
-const XLSX    = require('xlsx');
-const crypto  = require('crypto');
-const fs      = require('fs');
-const path    = require('path');
+const XLSX   = require('xlsx');
+const fs     = require('fs');
+const path   = require('path');
 
-const ACCESS_KEY = process.env.COUPANG_ACCESS_KEY || '5071cf37-ab91-4a62-bf52-35a0ae61b15e';
-const SECRET_KEY = process.env.COUPANG_SECRET_KEY || 'f66f24d0649ec9157b72602dc192f9b2a09bce3d';
+const CLIENT_ID     = process.env.NAVER_CLIENT_ID     || 'CsW83ZRverE3gRykEbKc';
+const CLIENT_SECRET = process.env.NAVER_CLIENT_SECRET || 'hVKOF6v9sX';
+const OUT_PATH      = path.join(__dirname, '..', 'docs', 'data.json');
 
-function generateHmac(method, apiPath, query) {
-  const now = new Date();
-  const dt =
-    String(now.getUTCFullYear()).slice(2) +
-    String(now.getUTCMonth() + 1).padStart(2, '0') +
-    String(now.getUTCDate()).padStart(2, '0') + 'T' +
-    String(now.getUTCHours()).padStart(2, '0') +
-    String(now.getUTCMinutes()).padStart(2, '0') +
-    String(now.getUTCSeconds()).padStart(2, '0') + 'Z';
-  const sig = crypto.createHmac('sha256', SECRET_KEY).update(dt + method + apiPath + query).digest('hex');
-  return { datetime: dt, signature: sig };
-}
-
-async function searchCoupang(keyword) {
-  const apiPath = '/v2/providers/affiliate_open_api/apis/openapi/v1/products/search';
-  const query   = `keyword=${encodeURIComponent(keyword)}&limit=10`;
-  const { datetime, signature } = generateHmac('GET', apiPath, query);
-  const res = await fetch(`https://api-gateway.coupang.com${apiPath}?${query}`, {
+// 네이버 쇼핑 검색
+async function searchNaver(keyword, display = 20) {
+  const url = `https://openapi.naver.com/v1/search/shop.json?query=${encodeURIComponent(keyword)}&display=${display}&sort=sim`;
+  const res  = await fetch(url, {
     headers: {
-      Authorization: `CEA algorithm=HmacSHA256, access-key=${ACCESS_KEY}, signed-date=${datetime}, signature=${signature}`,
+      'X-Naver-Client-Id':     CLIENT_ID,
+      'X-Naver-Client-Secret': CLIENT_SECRET,
     }
   });
+  if (!res.ok) {
+    const text = await res.text();
+    console.log(`  [네이버 API] ${res.status} ${text.slice(0, 80)}`);
+    return [];
+  }
   const data = await res.json();
-  if (data.rCode !== '0') return [];
-  return data.data?.productData || [];
+  return data.items || [];
+}
+
+function stripHtml(str) {
+  return str.replace(/<[^>]+>/g, '');
 }
 
 function loadProducts() {
@@ -52,51 +47,118 @@ function loadProducts() {
   return products;
 }
 
+function loadExisting() {
+  try {
+    return JSON.parse(fs.readFileSync(OUT_PATH, 'utf8')).products || [];
+  } catch { return []; }
+}
+
+function saveResults(results) {
+  fs.writeFileSync(OUT_PATH, JSON.stringify({
+    updatedAt: new Date().toISOString(),
+    products:  results,
+  }, null, 2), 'utf8');
+}
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
 async function main() {
   const products = loadProducts();
-  console.log(`상품 ${products.length}개 로드`);
+  const existing = loadExisting();
 
-  const results = [];
+  const prevMap = {};
+  for (const p of existing) prevMap[p.model] = p;
 
-  for (const p of products) {
-    const keyword  = '삼성 ' + p.note;
-    const refPrice = p.coupangRef || p.naverRef;
-    const min_price = refPrice ? Math.round(refPrice * 0.7) : 0;
-    const max_price = refPrice ? Math.round(refPrice * 1.3) : Infinity;
+  const results = products.map(p => ({
+    ...p,
+    cheapest: prevMap[p.model]?.cheapest || null,
+    image:    prevMap[p.model]?.image    || null,
+    top5:     prevMap[p.model]?.top5     || [],
+  }));
+
+  const todo = results.filter(p => !p.cheapest);
+  console.log(`총 ${products.length}개 | 완료: ${results.length - todo.length}개 | 남은 것: ${todo.length}개\n`);
+
+  if (todo.length === 0) {
+    console.log('모두 완료되어 있습니다.');
+    return;
+  }
+
+  for (const p of todo) {
+    const refPrice  = p.coupangRef || p.naverRef;
+    const min_price = refPrice ? Math.round(refPrice * 0.5) : 0;
+    const max_price = refPrice ? Math.round(refPrice * 1.5) : Infinity;
+    // 카테고리별 1차 키워드
+    const firstKeyword = {
+      '휴대폰': `삼성 ${p.note} 자급제 공기계`,
+      '태블릿': `삼성 ${p.note} wifi`,
+      '노트북': `삼성 ${p.note}`,
+      '모니터': `삼성 ${p.note}`,
+      '티비':   `삼성 ${p.note}`,
+    };
+    // 카테고리별 재시도 키워드 (모델번호 기반)
+    const retryKeyword = {
+      '휴대폰': `삼성 ${p.note} 자급제`,
+      '태블릿': `삼성 ${p.model}`,
+      '노트북': `삼성 ${p.model}`,
+      '모니터': `삼성 ${p.model}`,
+      '티비':   `삼성 ${p.model}`,
+    };
+    const keyword = firstKeyword[p.category] || `삼성 ${p.note}`;
+
+    console.log(`[${p.id}/${products.length}] ${p.model} (${keyword}) 참고가: ${refPrice?.toLocaleString()}원`);
 
     try {
-      const items = await searchCoupang(keyword);
-      const withPrice = items.filter(i => i.productPrice > 0).map(i => ({
-        name:  i.productName,
-        price: i.productPrice,
-        url:   i.productUrl,
-        image: i.productImage || null,
-      }));
-      const inRange = refPrice
-        ? withPrice.filter(i => i.price >= min_price && i.price <= max_price)
-        : withPrice;
+      let items = await searchNaver(keyword, 30);
+
+      function filterItems(arr) {
+        return arr
+          .map(i => ({
+            name:  stripHtml(i.title),
+            price: parseInt(i.lprice, 10),
+            url:   i.link,
+            image: i.image || null,
+            mall:  i.mallName || '',
+          }))
+          .filter(i => i.price >= 30000) // 액세서리(케이스·필름 등) 제외
+          .filter(i => !refPrice || (i.price >= min_price && i.price <= max_price));
+      }
+
+      let inRange = filterItems(items);
+
+      // 범위 내 없으면 모델번호 기반으로 재시도
+      if (inRange.length === 0) {
+        const retry = retryKeyword[p.category] || `삼성 ${p.model}`;
+        console.log(`  → 재시도: ${retry}`);
+        await sleep(500);
+        items   = await searchNaver(retry, 30);
+        inRange = filterItems(items);
+      }
+
       const sorted   = inRange.sort((a, b) => a.price - b.price);
       const cheapest = sorted[0] || null;
 
-      console.log(`  ${p.model} → ${cheapest ? cheapest.price + '원' : '없음'}`);
-      results.push({ ...p, cheapest, image: cheapest?.image || null, top5: sorted.slice(0, 5) });
+      const target    = results.find(r => r.model === p.model);
+      target.cheapest = cheapest;
+      target.image    = cheapest?.image || null;
+      target.top5     = sorted.slice(0, 5);
+
+      if (cheapest) {
+        console.log(`  → ${cheapest.price.toLocaleString()}원 (${cheapest.mall}) ${cheapest.name.slice(0, 30)}`);
+      } else {
+        console.log(`  → 범위 내 결과 없음 (${min_price.toLocaleString()}~${max_price.toLocaleString()}원)`);
+      }
     } catch (e) {
-      console.error(`  ${p.model} 오류:`, e.message);
-      results.push({ ...p, cheapest: null, image: null, top5: [] });
+      console.error(`  → 오류: ${e.message}`);
     }
 
-    // API 부하 방지
-    await new Promise(r => setTimeout(r, 500));
+    await sleep(300); // 네이버는 제한 여유로움, 0.3초 딜레이
   }
 
-  const output = {
-    updatedAt: new Date().toISOString(),
-    products:  results,
-  };
-
-  const outPath = path.join(__dirname, '..', 'docs', 'data.json');
-  fs.writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
-  console.log(`\n저장 완료: ${outPath}`);
+  saveResults(results);
+  const done = results.filter(p => p.cheapest).length;
+  console.log(`\n✅ 저장 완료: ${OUT_PATH}`);
+  console.log(`완료 ${done}개 / 전체 ${results.length}개`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

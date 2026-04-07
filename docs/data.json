@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-06T11:59:10.577Z",
+  "updatedAt": "2026-04-07T04:57:33.476Z",
   "products": [
     {
       "id": 1,
@@ -8,9 +8,51 @@
       "note": "UHD 55",
       "coupangRef": 480000,
       "naverRef": 456810,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성 139cm 4K 스마트 UHD TV 55DU7200/6900 수도권스탠드설치",
+        "price": 525000,
+        "url": "https://smartstore.naver.com/main/products/9774777338",
+        "image": "https://shopping-phinf.pstatic.net/main_8731927/87319279611.3.jpg",
+        "mall": "SAMSUNG LG 리퍼몰"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_8731927/87319279611.3.jpg",
+      "top5": [
+        {
+          "name": "삼성 139cm 4K 스마트 UHD TV 55DU7200/6900 수도권스탠드설치",
+          "price": 525000,
+          "url": "https://smartstore.naver.com/main/products/9774777338",
+          "image": "https://shopping-phinf.pstatic.net/main_8731927/87319279611.3.jpg",
+          "mall": "SAMSUNG LG 리퍼몰"
+        },
+        {
+          "name": "삼성 TV 55U7900 UHD 4K 스마트티비 138cm(55인치) 25년 수도권스탠드",
+          "price": 529000,
+          "url": "https://smartstore.naver.com/main/products/9775442587",
+          "image": "https://shopping-phinf.pstatic.net/main_8731994/87319944860.8.jpg",
+          "mall": "SAMSUNG LG 리퍼몰"
+        },
+        {
+          "name": "삼성전자 삼성 2024 LED 4K CU700 138cm(55인치) (HG55CU700NFXKR), 스탠드",
+          "price": 549680,
+          "url": "https://search.shopping.naver.com/catalog/54810499104",
+          "image": "https://shopping-phinf.pstatic.net/main_5481049/54810499104.20250516111804.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성 125.7cm(50인치) 4K UHD 1등급 스마트 비지니스TV 삼성기사님 무료설치",
+          "price": 569000,
+          "url": "https://smartstore.naver.com/main/products/11109978033",
+          "image": "https://shopping-phinf.pstatic.net/main_8865448/88654488355.3.jpg",
+          "mall": "브랜드쇼핑닷컴"
+        },
+        {
+          "name": "삼성 Crystal UHD U7900F 스마트 TV 138cm(55인치)",
+          "price": 569000,
+          "url": "https://smartstore.naver.com/main/products/13203133132",
+          "image": "https://shopping-phinf.pstatic.net/main_9074764/90747644229.1.jpg",
+          "mall": "레뉴잇"
+        }
+      ]
     },
     {
       "id": 2,
@@ -19,9 +61,51 @@
       "note": "UHD 65",
       "coupangRef": 605000,
       "naverRef": 574200,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성 Crystal UHD U8000F 스마트 TV 163cm(65인치), 스탠드",
+        "price": 700000,
+        "url": "https://smartstore.naver.com/main/products/13192701897",
+        "image": "https://shopping-phinf.pstatic.net/main_9073721/90737212993.1.jpg",
+        "mall": "레뉴잇"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_9073721/90737212993.1.jpg",
+      "top5": [
+        {
+          "name": "삼성 Crystal UHD U8000F 스마트 TV 163cm(65인치), 스탠드",
+          "price": 700000,
+          "url": "https://smartstore.naver.com/main/products/13192701897",
+          "image": "https://shopping-phinf.pstatic.net/main_9073721/90737212993.1.jpg",
+          "mall": "레뉴잇"
+        },
+        {
+          "name": "삼성전자 삼성 2025 LED Crystal UHD 4K 163cm(65인치) (KU65UF8030FXKR), 스탠드",
+          "price": 878890,
+          "url": "https://search.shopping.naver.com/catalog/59016042102",
+          "image": "https://shopping-phinf.pstatic.net/main_5901604/59016042102.20260223170956.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성 163.9cm(65인치) 스마트 사이니지 TV UHD LED 1등급 BE65",
+          "price": 879000,
+          "url": "https://smartstore.naver.com/main/products/10967935914",
+          "image": "https://shopping-phinf.pstatic.net/main_8851244/88512441957.17.jpg",
+          "mall": "스마트공식스토어"
+        },
+        {
+          "name": "삼성 163.9cm(65인치) 4K UHD 1등급 스마트 비지니스TV 삼성기사님 무료설치",
+          "price": 879000,
+          "url": "https://smartstore.naver.com/main/products/10418453953",
+          "image": "https://shopping-phinf.pstatic.net/main_8796295/87962958938.8.jpg",
+          "mall": "공식브랜드스토어"
+        },
+        {
+          "name": "삼성 65인치(163.9cm)티비 스마트 사이니지 TV UHD LED 1등급 LHBE65",
+          "price": 879000,
+          "url": "https://smartstore.naver.com/main/products/6678830297",
+          "image": "https://shopping-phinf.pstatic.net/main_8422333/84223330619.7.jpg",
+          "mall": "온라인 정품판매점"
+        }
+      ]
     },
     {
       "id": 3,
@@ -30,9 +114,51 @@
       "note": "갤럭시A36",
       "coupangRef": 419000,
       "naverRef": 419000,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성전자 갤럭시 A36 5G 8램 128GB 화이트 구매자납부 듀얼심+e심 자급제",
+        "price": 373600,
+        "url": "https://smartstore.naver.com/main/products/11914778098",
+        "image": "https://shopping-phinf.pstatic.net/main_8945928/89459288707.1.jpg",
+        "mall": "HKPHONE"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_8945928/89459288707.1.jpg",
+      "top5": [
+        {
+          "name": "삼성전자 갤럭시 A36 5G 8램 128GB 화이트 구매자납부 듀얼심+e심 자급제",
+          "price": 373600,
+          "url": "https://smartstore.naver.com/main/products/11914778098",
+          "image": "https://shopping-phinf.pstatic.net/main_8945928/89459288707.1.jpg",
+          "mall": "HKPHONE"
+        },
+        {
+          "name": "삼성전자 갤럭시 A36 128GB 듀얼심 5G 공기계 자급제폰 관부가세 포함 326554",
+          "price": 381070,
+          "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8637049768&tid=1000000061",
+          "image": "https://shopping-phinf.pstatic.net/main_5660943/56609431186.1.jpg",
+          "mall": "11번가"
+        },
+        {
+          "name": "갤럭시A 삼성전자 갤럭시 A36 5G 8램 128GB 듀얼심+e심 자급제 미사용 공기계폰",
+          "price": 384000,
+          "url": "https://link.auction.co.kr/gate/pcs?item-no=F406053359&sub-id=1&service-code=10000003",
+          "image": "https://shopping-phinf.pstatic.net/main_5912913/59129133341.1.jpg",
+          "mall": "옥션"
+        },
+        {
+          "name": "삼성전자 삼성전자 갤럭시 A36 5G 8램 128GB 듀얼심+e심 자급제 미사용 공기계폰",
+          "price": 384000,
+          "url": "https://link.gmarket.co.kr/gate/pcs?item-no=4600183548&sub-id=1003&service-code=10000003&lcd=100000056",
+          "image": "https://shopping-phinf.pstatic.net/main_5912913/59129135609.jpg",
+          "mall": "G마켓"
+        },
+        {
+          "name": "삼성전자 갤럭시 A36 5G 128GB [자급제]",
+          "price": 391020,
+          "url": "https://search.shopping.naver.com/catalog/55266448377",
+          "image": "https://shopping-phinf.pstatic.net/main_5526644/55266448377.20250617184730.jpg",
+          "mall": "네이버"
+        }
+      ]
     },
     {
       "id": 4,
@@ -41,9 +167,51 @@
       "note": "갤럭시A17",
       "coupangRef": 286000,
       "naverRef": 286000,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성전자 갤럭시 A17 LTE 4램 128기가 블랙 듀얼심 자급제 미사용 공기계폰",
+        "price": 219500,
+        "url": "https://smartstore.naver.com/main/products/12468831702",
+        "image": "https://shopping-phinf.pstatic.net/main_9001334/90013342449.3.jpg",
+        "mall": "HKPHONE"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_9001334/90013342449.3.jpg",
+      "top5": [
+        {
+          "name": "삼성전자 갤럭시 A17 LTE 4램 128기가 블랙 듀얼심 자급제 미사용 공기계폰",
+          "price": 219500,
+          "url": "https://smartstore.naver.com/main/products/12468831702",
+          "image": "https://shopping-phinf.pstatic.net/main_9001334/90013342449.3.jpg",
+          "mall": "HKPHONE"
+        },
+        {
+          "name": "삼성전자 갤럭시 A17 8램 128기가 듀얼심 자급제 미사용 공기계폰",
+          "price": 258010,
+          "url": "https://smartstore.naver.com/main/products/12733462778",
+          "image": "https://shopping-phinf.pstatic.net/main_9027797/90277973719.jpg",
+          "mall": "우주빌직구대행"
+        },
+        {
+          "name": "[삼성전자] 갤럭시 A17 통신향  128GB  라이트 블루",
+          "price": 264000,
+          "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9253238934&ctag=9253238934&lptag=I27370711996&itemId=27370711996&vendorItemId=94336659966&spec=10305199",
+          "image": "https://shopping-phinf.pstatic.net/main_5823796/58237969185.jpg",
+          "mall": "쿠팡"
+        },
+        {
+          "name": "[삼성전자] 갤럭시 A17 통신향  128GB  그레이",
+          "price": 264000,
+          "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9253238934&ctag=9253238934&lptag=I27370712002&itemId=27370712002&vendorItemId=94336659968&spec=10305199",
+          "image": "https://shopping-phinf.pstatic.net/main_5823826/58238260237.jpg",
+          "mall": "쿠팡"
+        },
+        {
+          "name": "[삼성전자] 갤럭시 A17 통신향  128GB  블랙",
+          "price": 264000,
+          "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=9253238934&ctag=9253238934&lptag=I27370711999&itemId=27370711999&vendorItemId=94336659967&spec=10305199",
+          "image": "https://shopping-phinf.pstatic.net/main_5823640/58236404788.jpg",
+          "mall": "쿠팡"
+        }
+      ]
     },
     {
       "id": 5,
@@ -52,9 +220,51 @@
       "note": "갤럭시북3 GO",
       "coupangRef": 449000,
       "naverRef": 468000,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성전자 삼성 갤럭시 북3 Go 5G 실버 미개봉 새제품 128GB 14인치 100% 삼성 정품 제품 / 정품 아닐시 200% 환불",
+        "price": 424000,
+        "url": "https://link.auction.co.kr/gate/pcs?item-no=E916170068&sub-id=1&service-code=10000003",
+        "image": "https://shopping-phinf.pstatic.net/main_5839696/58396963833.jpg",
+        "mall": "옥션"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_5839696/58396963833.jpg",
+      "top5": [
+        {
+          "name": "삼성전자 삼성 갤럭시 북3 Go 5G 실버 미개봉 새제품 128GB 14인치 100% 삼성 정품 제품 / 정품 아닐시 200% 환불",
+          "price": 424000,
+          "url": "https://link.auction.co.kr/gate/pcs?item-no=E916170068&sub-id=1&service-code=10000003",
+          "image": "https://shopping-phinf.pstatic.net/main_5839696/58396963833.jpg",
+          "mall": "옥션"
+        },
+        {
+          "name": "삼성전자 갤럭시북3 Go NT345XPA-KC04S RAM 4GB, 128GB",
+          "price": 448000,
+          "url": "https://search.shopping.naver.com/catalog/55670617401",
+          "image": "https://shopping-phinf.pstatic.net/main_5567061/55670617401.20250707160949.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성전자 갤럭시북3 Go NT345XPA-K14A 4GB, 128GB",
+          "price": 469000,
+          "url": "https://search.shopping.naver.com/catalog/52647383677",
+          "image": "https://shopping-phinf.pstatic.net/main_5264738/52647383677.20250124121905.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성 갤럭시북3 Go NT345XPA-K14A LTE 5G 윈도우11 싼 노트북",
+          "price": 469000,
+          "url": "https://smartstore.naver.com/main/products/10298396654",
+          "image": "https://shopping-phinf.pstatic.net/main_8784290/87842900668.17.jpg",
+          "mall": "삼성공식파트너 코인비엠에스"
+        },
+        {
+          "name": "삼성전자 갤럭시북3 GO NT345XPA K14A LTE 5G 윈도우11 노트북",
+          "price": 499000,
+          "url": "https://smartstore.naver.com/main/products/8550578747",
+          "image": "https://shopping-phinf.pstatic.net/main_8609507/86095079070.4.jpg",
+          "mall": "정인씨티에스"
+        }
+      ]
     },
     {
       "id": 6,
@@ -63,9 +273,51 @@
       "note": "갤럭시탭A8",
       "coupangRef": 179000,
       "naverRef": 168000,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성전자 삼성 갤럭시탭 a8_64GB(Wifi) 중고 태블릿 [x200]",
+        "price": 140390,
+        "url": "https://www.lotteon.com/p/product/LO2615880935?sitmNo=LO2615880935_2615880936&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT",
+        "image": "https://shopping-phinf.pstatic.net/main_5879538/58795380871.jpg",
+        "mall": "롯데ON"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_5879538/58795380871.jpg",
+      "top5": [
+        {
+          "name": "삼성전자 삼성 갤럭시탭 a8_64GB(Wifi) 중고 태블릿 [x200]",
+          "price": 140390,
+          "url": "https://www.lotteon.com/p/product/LO2615880935?sitmNo=LO2615880935_2615880936&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT",
+          "image": "https://shopping-phinf.pstatic.net/main_5879538/58795380871.jpg",
+          "mall": "롯데ON"
+        },
+        {
+          "name": "삼성전자 삼성 갤럭시탭 a8 10.5 (LTE+WIFI) 중고 태블릿 [X205]",
+          "price": 149750,
+          "url": "https://www.lotteon.com/p/product/LO2603391569?sitmNo=LO2603391569_2603391570&ch_no=100065&ch_dtl_no=1000030&entryPoint=pcs&dp_infw_cd=CHT",
+          "image": "https://shopping-phinf.pstatic.net/main_5846313/58463131746.jpg",
+          "mall": "롯데ON"
+        },
+        {
+          "name": "삼성 갤럭시탭 a8_64GB (Wifi) 중고 태블릿 [X200]",
+          "price": 149970,
+          "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=8920457503&tid=1000000061",
+          "image": "https://shopping-phinf.pstatic.net/main_5870915/58709150019.1.jpg",
+          "mall": "11번가"
+        },
+        {
+          "name": "삼성 갤럭시탭 a8 10.5 (LTE+WIFI) 중고 태블릿 [X205]",
+          "price": 153100,
+          "url": "https://www.11st.co.kr/connect/Gateway.tmall?method=Xsite&prdNo=9012033118&tid=1000000061",
+          "image": "https://shopping-phinf.pstatic.net/main_5848151/58481512501.1.jpg",
+          "mall": "11번가"
+        },
+        {
+          "name": "갤럭시탭 삼성전자 갤럭시 탭 A8 10.5 WIFI 64GB 공기계 SM-X200 B등급",
+          "price": 159000,
+          "url": "https://link.auction.co.kr/gate/pcs?item-no=E837642490&sub-id=1&service-code=10000003",
+          "image": "https://shopping-phinf.pstatic.net/main_5418553/54185533977.2.jpg",
+          "mall": "옥션"
+        }
+      ]
     },
     {
       "id": 7,
@@ -74,9 +326,51 @@
       "note": "QHD 32",
       "coupangRef": 269000,
       "naverRef": 278120,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성전자 오디세이 G5 LS32CG550 80~81cm(32인치)",
+        "price": 274810,
+        "url": "https://search.shopping.naver.com/catalog/52630719175",
+        "image": "https://shopping-phinf.pstatic.net/main_5263071/52630719175.20250123153612.jpg",
+        "mall": "네이버"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_5263071/52630719175.20250123153612.jpg",
+      "top5": [
+        {
+          "name": "삼성전자 오디세이 G5 LS32CG550 80~81cm(32인치)",
+          "price": 274810,
+          "url": "https://search.shopping.naver.com/catalog/52630719175",
+          "image": "https://shopping-phinf.pstatic.net/main_5263071/52630719175.20250123153612.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성전자 오디세이 G5 C32G54T 80~81cm(32인치)",
+          "price": 280000,
+          "url": "https://search.shopping.naver.com/catalog/52611946436",
+          "image": "https://shopping-phinf.pstatic.net/main_5261194/52611946436.20250122123313.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성 오디세이 G5 QHD G55C 165Hz 게이밍 모니터 80~81cm(32인치)",
+          "price": 280000,
+          "url": "https://smartstore.naver.com/main/products/5079118733",
+          "image": "https://shopping-phinf.pstatic.net/main_8262364/82623640431.32.jpg",
+          "mall": "삼성공식파트너 유겐트"
+        },
+        {
+          "name": "삼성전자 QHD 오디세이 G5 게이밍 모니터  80cm  C32G54T",
+          "price": 283000,
+          "url": "https://link.coupang.com/re/PCSNAVERPCSDP?pageKey=2016668002&ctag=2016668002&lptag=I24333829868&itemId=24333829868&vendorItemId=91255194011&spec=10305199",
+          "image": "https://shopping-phinf.pstatic.net/main_5744766/57447669841.5.jpg",
+          "mall": "쿠팡"
+        },
+        {
+          "name": "삼성 오디세이 G5 LS32FG510 80cm (32인치) QHD 180Hz 게이밍 모니터",
+          "price": 329000,
+          "url": "https://smartstore.naver.com/main/products/12868134501",
+          "image": "https://shopping-phinf.pstatic.net/main_9041264/90412645493.1.jpg",
+          "mall": "삼성전자공식파트너 큐소닉"
+        }
+      ]
     },
     {
       "id": 8,
@@ -85,9 +379,51 @@
       "note": "FHD 24",
       "coupangRef": 141000,
       "naverRef": 133990,
-      "cheapest": null,
-      "image": null,
-      "top5": []
+      "cheapest": {
+        "name": "삼성 24형 CCTV용 게이밍 사무용 가정용 1번 61cm LED 모니터",
+        "price": 71000,
+        "url": "https://smartstore.naver.com/main/products/5930048644",
+        "image": "https://shopping-phinf.pstatic.net/main_8347454/83474548132.7.jpg",
+        "mall": "네고시티"
+      },
+      "image": "https://shopping-phinf.pstatic.net/main_8347454/83474548132.7.jpg",
+      "top5": [
+        {
+          "name": "삼성 24형 CCTV용 게이밍 사무용 가정용 1번 61cm LED 모니터",
+          "price": 71000,
+          "url": "https://smartstore.naver.com/main/products/5930048644",
+          "image": "https://shopping-phinf.pstatic.net/main_8347454/83474548132.7.jpg",
+          "mall": "네고시티"
+        },
+        {
+          "name": "삼성 사무용 모니터 업무용 가정용 게임용 LED 61CM 피벗 틸트 1번 LS24C45",
+          "price": 76000,
+          "url": "https://smartstore.naver.com/main/products/7778677387",
+          "image": "https://shopping-phinf.pstatic.net/main_8532317/85323177709.2.jpg",
+          "mall": "에누리컴"
+        },
+        {
+          "name": "컴퓨터 모니터 61cm(24인치) PC 게이밍 모니터 IPS 삼성 LG 대기업 패널 사무용",
+          "price": 86000,
+          "url": "https://smartstore.naver.com/main/products/4734058970",
+          "image": "https://shopping-phinf.pstatic.net/main_8227858/82278580434.13.jpg",
+          "mall": "전문대리점"
+        },
+        {
+          "name": "삼성전자 삼성 에센셜 모니터 LS24F330 59~61cm(24인치)",
+          "price": 120000,
+          "url": "https://search.shopping.naver.com/catalog/57353609994",
+          "image": "https://shopping-phinf.pstatic.net/main_5735360/57353609994.20251024103728.jpg",
+          "mall": "네이버"
+        },
+        {
+          "name": "삼성전자 삼성 LS24D300 59~61cm(24인치) ",
+          "price": 133990,
+          "url": "https://search.shopping.naver.com/catalog/53874350407",
+          "image": "https://shopping-phinf.pstatic.net/main_5387435/53874350407.20250331152322.jpg",
+          "mall": "네이버"
+        }
+      ]
     }
   ]
 }

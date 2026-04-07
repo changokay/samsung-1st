@@ -117,7 +117,7 @@
 <main>
   <div class="page-title">
     <h1>삼성 제품 쿠팡 로켓배송 최저가</h1>
-    <p>s-mn-claude 모델 기준 · 참고가 ±30% 범위 내 로켓배송 최저가 조회 · 6시간마다 자동 업데이트</p>
+    <p>s-mn-claude 모델 기준 · 참고가 ±50% 범위 내 최저가 조회 · 6시간마다 자동 업데이트</p>
   </div>
 
   <div class="stats">
@@ -133,7 +133,7 @@
 </main>
 
 <footer>
-  ※ 참고가 ±30% 범위 내 쿠팡 상품을 조회합니다. 가격은 참고용이며 실제 판매가와 다를 수 있습니다.<br>
+  ※ 참고가 ±50% 범위 내 상품을 조회합니다. 가격은 참고용이며 실제 판매가와 다를 수 있습니다.<br>
   데이터는 GitHub Actions에 의해 6시간마다 자동 갱신됩니다.
 </footer>
 
@@ -175,7 +175,7 @@ function renderCard(p) {
     const col  = diff > 0 ? 'var(--green)' : diff < 0 ? '#ff6b6b' : 'var(--muted)';
     btnUrl = url;
     priceBox = `<div class="price-box">
-      <div class="price-label">🚀 로켓 최저가</div>
+      <div class="price-label">🛒 ${p.cheapest.mall || '최저가'}</div>
       <div class="price-right">
         <div class="price-amount">${price.toLocaleString()}<span style="font-size:11px;font-weight:500">원</span></div>
         ${ref ? `<div class="savings" style="color:${col}">${sign}</div>` : ''}
@@ -209,7 +209,7 @@ function renderCard(p) {
       </div>
       ${priceBox}
       <div class="card-btns">
-        <a class="btn-go${btnUrl?'':' disabled'}" ${btnUrl?`href="${btnUrl}" target="_blank" rel="noopener"`:''}>${btnUrl ? '🛒 쿠팡에서 보기' : '결과 없음'}</a>
+        <a class="btn-go${btnUrl?'':' disabled'}" ${btnUrl?`href="${btnUrl}" target="_blank" rel="noopener"`:''}>${btnUrl ? '🔗 상품 보기' : '결과 없음'}</a>
       </div>
     </div>
   </div>`;
